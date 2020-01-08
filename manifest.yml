@@ -7,3 +7,13 @@ applications:
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+- name: pal-tracker
+  path: build/libs/pal-tracker.jar
+  routes:
+  - route: pal-tracker-bashaar-shah.apps.evans.pal.pivotal.io
+  services:
+  - tracker-database
+  env:
+    WELCOME_MESSAGE: Hello from the review environment
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+
